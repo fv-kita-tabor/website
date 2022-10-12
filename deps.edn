@@ -1,0 +1,6 @@
+{:deps {io.github.nextjournal/clerk {:git/sha "8be087166ef4308c6bfb4adafb5a0c68cd2200a0"}
+        org.babashka/cli {:mvn/version "0.5.40"}}
+ :aliases {:dev {:extra-paths ["dev"]}
+           :nextjournal/clerk {:exec-fn nextjournal.clerk/build!
+                               :exec-args {:paths ["index.md"]}
+                               :main-opts ["-m" "babashka.cli.exec"]}}}
